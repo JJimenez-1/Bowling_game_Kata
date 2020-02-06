@@ -18,9 +18,11 @@ public class ScoreCard {
         for (int roll = 0; roll < (getGameScore().length()); roll++) {
             char rollChar = getGameScore().charAt(roll);
             if (rollChar == '-') {
-                rollChar.replace;
+                puntuacion += 0;
             }
-            puntuacion += Character.getNumericValue(rollChar);
+            else {
+                puntuacion += Character.getNumericValue(rollChar);
+            }
         }
         return puntuacion;
     }
