@@ -5,21 +5,23 @@ import java.util.List;
 
 public class ScoreCard {
 
-    private final String score;
-    public List<ScoreCard> scoreCards = new ArrayList<>();
-    public List<ScoreCard> getScoreCards();
+    private String score = "";
+    ScoreCard(String puntuacion) { this.score = puntuacion; }
 
-    public ScoreCard(String score) {
-        this.score = score;
-    }
 
-    String getGameScore() {
+    public String getGameScore() {
         return this.score;
     }
 
-
-    int toInt() {
-        int number = Integer.parseInt(score);
-            return number;
+    public int FinalScore() {
+        int puntuacion = 0;
+        for (int roll = 0; roll < (getGameScore().length()); roll++) {
+            char rollChar = getGameScore().charAt(roll);
+            if (rollChar == '-') {
+                rollChar.replace;
+            }
+            puntuacion += Character.getNumericValue(rollChar);
+        }
+        return puntuacion;
     }
 }

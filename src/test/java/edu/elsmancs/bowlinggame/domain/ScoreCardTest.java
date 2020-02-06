@@ -11,10 +11,18 @@ public class ScoreCardTest {
         assertEquals("12345123451234512345", scorecard.getGameScore());
     }
 
+
     @Test
-    public void toIntTest() {
-        ScoreCard scorecard = new ScoreCard("1");
-        assertEquals(1, scorecard.toInt(), 0);
+    public void sumTotal() {
+        ScoreCard scorecard = new ScoreCard("12345123451234512345");
+        assertEquals(60, scorecard.FinalScore(), 0);
     }
+
+    @Test
+    public void sumTotalWith0() {
+        ScoreCard scorecard = new ScoreCard("9-9-9-9-9-9-9-9-9-9-");
+        assertEquals(90, scorecard.FinalScore(),0 );
+    }
+
 
 }
